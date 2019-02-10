@@ -46,7 +46,8 @@
 			<visible>Library.HasContent(Music)</visible>
 		</control>
 		<include>CommonBackground</include>
-		<control type="image">
+		<!-- Remove Floor
+			<control type="image">
 			<depth>DepthFloor</depth>
 			<left>-20</left>
 			<top/>
@@ -58,6 +59,7 @@
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
+		-->
 		<!-- Music Info -->
 		<control type="group">
 			<depth>DepthMenu</depth>
@@ -726,7 +728,8 @@
 						<enable>Player.PauseEnabled</enable>
 						<animation effect="fade" start="100" end="30" time="75" condition="!Player.PauseEnabled">Conditional</animation>
 					</control>
-					<control type="button" id="605">
+					<!-- Remove RADIO
+						<control type="button" id="605">
 						<left>130</left>
 						<top>2</top>
 						<width>30</width>
@@ -742,6 +745,7 @@
 						<enable>RDS.HasRadiotextPlus</enable>
 						<animation effect="fade" start="100" end="30" time="75" condition="!RDS.HasRadiotextPlus">Conditional</animation>
 					</control>
+					-->
 					<control type="button" id="606">
 						<left>160</left>
 						<top>2</top>
