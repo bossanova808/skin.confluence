@@ -169,6 +169,8 @@
 				<top>50</top>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>Container(9000).Hasfocus(11) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo) + !Skin.HasSetting(HomeMenuTVShowUsePlaylist)</visible>
+				<!-- BOSSANOVA808 mod - disable recently avoided for TV, avoid spoilers -->
+				<visible>False</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
