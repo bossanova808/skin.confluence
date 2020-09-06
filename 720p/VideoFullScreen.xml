@@ -4,8 +4,8 @@
 	<controls>
 		<!-- BOSSANOVA808 MOD - OzWeather Radar and Short Forecast -->
 	    <control type="group" id="10125">
-  			<posx>0</posx>
-  			<posy>25</posy>
+  			<posx>-15</posx>
+  			<posy>-5</posy>
   			<!-- Only show weather if it is available - using a predicted high of zero since this never happens where I live, but it's dodgy -->
   			<!-- Should use Weather.IsFetched but for some reason it doesn't work as expected -->
 			<!-- <visible>!Weather.IsFetched</visible> -->
@@ -102,7 +102,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="group" id="10126">
-				<posx>140</posx>
+				<posx>120</posx>
 				<posy>15</posy>
 				 <control type="image" id="19547">
 					<posx>0</posx>
