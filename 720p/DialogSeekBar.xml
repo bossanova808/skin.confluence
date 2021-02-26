@@ -15,10 +15,10 @@
 			<control type="image" id="1">
 				<depth>DepthOSDPopout</depth>
 				<description>Video cover image</description>
-				<posx>20</posx>
+				<posx>10</posx>
 				<posy>350r</posy>
-				<width>300</width>
-				<height>330</height>
+				<width>310</width>
+				<height>340</height>
 				<texture fallback="DefaultVideoCover.png">$VAR[NowPlayingThumb]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 			</control>
