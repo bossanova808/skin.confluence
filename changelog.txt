@@ -1,8 +1,25 @@
+[B]4.7.14[/B]
+
+- Add PVR guide controls dialog
+
+[B]4.7.15[/B]
+
+- Add OSD dialog to control tempo for fullscreen video window
+
+[B]4.7.13[/B]
+
+- Updated language files from Transifex
+
+[B]4.7.12[/B]
+
+- Updated language files from Transifex
+
 [B]4.7.11[/B]
 
 - Fix PVR radio record button
 - Fix PVR recording label
 - Fix posters
+- Add "Versions" button to add-on information dialog
 
 [B]4.7.10[/B]
 
