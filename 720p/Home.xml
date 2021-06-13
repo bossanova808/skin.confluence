@@ -46,6 +46,7 @@
 			<visible>Library.HasContent(Music)</visible>
 		</control>
 		<include>CommonBackground</include>
+		<!-- BOSSANOVA808 Remove Floor
 		<control type="image">
 			<depth>DepthFloor</depth>
 			<left>-20</left>
@@ -58,6 +59,7 @@
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
+		-->
 		<!-- Music Info -->
 		<control type="group">
 			<depth>DepthMenu</depth>
@@ -1010,7 +1012,7 @@
 						<onclick>ActivateWindow(RadioChannels)</onclick>
 						<icon/>
 						<thumb/>
-						<visible>PVR.HasRadioChannels</visible>
+						<visible>False</visible> <!-- BOSSANOVA808 Remove Radio -->
 					</item>
 					<item id="12">
 						<label>31952</label>
@@ -1276,7 +1278,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font10</font>
-					<textcolor>white</textcolor>
+					<textcolor>gray</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[Window(Weather).Property(Location)]</label>
 				</control>
@@ -1295,7 +1297,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font28_title</font>
-						<textcolor>white</textcolor>
+						<textcolor>gray</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
 					</control>
@@ -1306,7 +1308,7 @@
 						<font>font10</font>
 						<aligny>center</aligny>
 						<label>$INFO[System.TemperatureUnits]</label>
-						<textcolor>white</textcolor>
+						<textcolor>gray</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 					</control>
@@ -1332,7 +1334,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font10</font>
-				<textcolor>white</textcolor>
+				<textcolor>gray</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Date]</label>
 				<include>Window_OpenClose_Animation</include>

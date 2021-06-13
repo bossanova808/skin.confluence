@@ -8,6 +8,22 @@
 	<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 	<depth>DepthOSD</depth>
 	<controls>
+		<!--  BOSSANOVA808 MOD CLEARART -->
+		<control type="group">
+	      	<visible>[Player.Paused]</visible>
+			<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD) | Player.ShowInfo</visible>
+			<control type="image" id="1">
+				<depth>DepthOSDPopout</depth>
+				<description>Video cover image</description>
+				<posx>10</posx>
+				<posy>350r</posy>
+				<width>310</width>
+				<height>340</height>
+				<texture fallback="DefaultVideoCover.png">$VAR[NowPlayingThumb]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+			</control>
+		</control>
+		<!-- END BOSSANOVA808 MOD CLEARART -->
 		<control type="group">
 			<visible>Window.IsVisible(FullscreenVideo) + ![Player.HasGame | VideoPlayer.HasEpg]</visible>
 			<left>850r</left>
@@ -140,6 +156,7 @@
 					<texture>OSDPlay.png</texture>
 					<visible>Player.Playing + !Player.IsTempo</visible>
 				</control>
+
 				<control type="image">
 					<left>28</left>
 					<top>4</top>
@@ -180,6 +197,7 @@
 					<texture>OSD32x.png</texture>
 					<visible>Player.Rewinding32x</visible>
 				</control>
+
 				<control type="image">
 					<left>34</left>
 					<top>4</top>
@@ -328,11 +346,11 @@
 					<top>23</top>
 					<width>240</width>
 					<height>20</height>
-					<font>font13_title</font>
+					<font>font10</font>
 					<textcolor>white</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Player.Time] - $INFO[Player.Duration]</label>
+					<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration] [-$INFO[VideoPlayer.TimeRemaining]]</label>
 					<visible>!Player.Seeking</visible>
 				</control>
 				<control type="label">
@@ -341,8 +359,8 @@
 					<top>23</top>
 					<width>240</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
+					<font>font10</font>
+					<textcolor>gray</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[Player.SeekTime] - $INFO[Player.Duration]</label>

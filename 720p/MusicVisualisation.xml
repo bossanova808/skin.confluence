@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<onload>RunScript(script.artistslideshow)</onload>
 	<defaultcontrol/>
 	<controls>
 		<control type="visualisation" id="2">
@@ -10,7 +11,24 @@
 			<width>1280</width>
 			<height>720</height>
 		</control>
+		<!-- Bossanova808 Use Artist Slideshow in Music Vis. -->
 		<control type="image">
+		    <aspectratio>scale</aspectratio>
+		    <fadetime>400</fadetime>
+		    <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		    <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		    <texture background="true">$INFO[Player.Art(fanart)]</texture>
+		    <visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+		</control>
+		<control type="image">
+		    <aspectratio>scale</aspectratio>
+		    <fadetime>400</fadetime>
+		    <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		    <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		    <texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+		    <visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+		</control>
+<!-- 		<control type="image">
 			<description>Fanart Image for Artist</description>
 			<left>0</left>
 			<top>0</top>
@@ -21,7 +39,8 @@
 			<colordiffuse>AAFFFFFF</colordiffuse>
 			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
 			<fadetime>600</fadetime>
-		</control>
+		</control> -->
+		<!-- end Bossanova808 mod -->
 		<!-- media infos -->
 		<control type="group">
 			<depth>DepthOSD</depth>
